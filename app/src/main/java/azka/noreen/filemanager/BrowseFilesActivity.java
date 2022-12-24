@@ -109,7 +109,8 @@ public class BrowseFilesActivity extends AppCompatActivity {
         StorageItems storageItems=new StorageItems(n,p);
         studentArrayList.add(storageItems);
 //        studentArrayList.notifyDataSetChanged();
-        rva.notifyDataSetChanged();
+        rva.notifyItemInserted(studentArrayList.size());
+//        rva.notifyDataSetChanged();
                         Toast.makeText(BrowseFilesActivity.this, "Item added", Toast.LENGTH_SHORT).show();
 
     }
