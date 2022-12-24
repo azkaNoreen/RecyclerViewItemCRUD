@@ -21,11 +21,10 @@
         android:hint="black"
         app:drawableTint="#000000"></TextView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_below="@+id/add"
-        android:id="@+id/rv"
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/added"
 
         ></androidx.recyclerview.widget.RecyclerView>
 

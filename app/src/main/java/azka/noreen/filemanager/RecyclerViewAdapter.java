@@ -129,8 +129,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         delete=itemView.findViewById(R.id.del);
     }
     }
-
-
     public void showDialog(Activity activity, String msg, String submessage,int pos){
         final Dialog dialog = new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);  //don't show dialog default title
