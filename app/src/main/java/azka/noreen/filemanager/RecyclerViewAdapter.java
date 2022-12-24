@@ -80,7 +80,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             @Override
             public void onClick(View view) {
                 StorageItemsArrayList.remove( position);
-                notifyDataSetChanged();
+                notifyItemRemoved(position);
+                notifyItemRangeChanged(position,getItemCount());
+
                 Toast.makeText(view.getContext(), "Deleted", Toast.LENGTH_SHORT).show();
 
             }
@@ -147,7 +149,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             public void onClick(View v) {
                 StorageItems item=new StorageItems(text.getText().toString(),stext.getText().toString());
                 StorageItemsArrayList.set( pos,item);
-                notifyDataSetChanged();
+                notifyItemChanged(pos);
 
 //                Toast.makeText(BrowseFilesActivity.this, "added", Toast.LENGTH_SHORT).show();
                 dialog.dismiss();
